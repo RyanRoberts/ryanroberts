@@ -1,26 +1,8 @@
-# Set "Expires" header
-# Won't work with Webfaction and their current config
-<IfModule mod_expires.c>
-  ExpiresActive On
+# do not display server version on error pages, or other pages
+ServerSignature Off
 
-  ExpiresByType audio/ogg        "access plus 1 years"
-  ExpiresByType audio/webm       "access plus 1 years"
-  ExpiresByType image/jpg        "access plus 1 years"
-  ExpiresByType image/jpeg       "access plus 1 years"
-  ExpiresByType image/gif        "access plus 1 years"
-  ExpiresByType image/png        "access plus 1 years"
-  ExpiresByType image/x-icon     "access plus 1 years"
-  ExpiresByType image/svg+xml    "access plus 1 years"
-  ExpiresByType video/mp4        "access plus 1 years"
-  ExpiresByType video/ogv        "access plus 1 years"
-  ExpiresByType video/webm       "access plus 1 years"
-
-  ExpiresByType text/xml                "access plus 1 months"
-  ExpiresByType text/x-component        "access plus 1 months"
-  ExpiresByType application/javascript  "access plus 1 months"
-  ExpiresByType text/css                "access plus 1 months"
-</IfModule>
-
+# This only works in httpd.conf… only return Apache in the Server header
+# ServerTokens Prod
 
 # One year
 <filesMatch ".(jpg|jpeg|png|gif|ico|eot|ttf|otf|woff|gz|svg|svgz|mp4|ogg|webm)$">
@@ -58,9 +40,3 @@
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "no-referrer-when-downgrade"
 </IfModule>
-
-# do not display server version on error pages, or other pages
-ServerSignature Off
-
-# This only works in httpd.conf… only return Apache in the Server header
-# ServerTokens Prod
