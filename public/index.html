@@ -1,9 +1,96 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ryan Roberts</title>
-</head>
-<body>
-  <p>Hello, I'm over here → <a href="https://yep.digital">yep.digital</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <title>Ryan Roberts Freelance Web Designer &amp; Developer</title>
+
+    <style>
+      html, body {
+        height: 100%;
+      }
+      body {
+        background-color: #0e0f1f;
+        color: #77eb9e;
+        display: flex;
+        font-family: "Source Code Pro", "sf mono", monospace;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      a {
+        color: #34aef1;
+        text-decoration: none;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0);
+        transition: all 0.2s linear;
+
+        position: relative;
+      }
+
+      a:after {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        height: 1px;
+        width: 0;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+
+      a[href="https://yep.digital"] {
+        color: #f4ba4f;
+      }
+
+      a[href*="linkedin"] {
+        color: #2a80c1;
+      }
+
+      a[href*="instagram"] {
+        color: #be267f;
+      }
+
+      a:hover,
+      a:focus {
+        color: #65d55d;
+        text-shadow: 0 0 5px rgba(131, 209, 108, 0.5);
+      }
+
+      a:hover:after {
+        background-color: rgba(131, 209, 108, 0.75);
+        width: 80%;
+        box-shadow: 0 0 5px rgba(131, 209, 108, 1);
+      }
+
+      h1 {
+        font-size: 100%;
+        font-weight: normal;
+      }
+
+      em {
+        font-style: normal;
+      }
+
+      .words {
+        padding: 2rem;
+        margin: auto;
+        max-width: 400px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="words">
+      <h1>Hey, I'm <em>Ryan Roberts</em>.</h1>
+      <p>I design, build and host bespoke websites for small to medium size businesses from Kintore in Aberdeenshire.</p>
+      <p>Find out more at <a href="https://yep.digital">Yep Digital</a>, or catch me on <a href="https://www.linkedin.com/in/helloryanroberts/">Linkedin</a> and <a href="https://www.instagram.com/ryanroberts/">Instagram</a>.</p>
+    </div>
+
+  </body>
+</html>
